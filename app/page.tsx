@@ -1,8 +1,12 @@
-import { Button } from "@/components/ui/button";
+import { Navbar } from "@/components/navbar";
+
 export default function Home() {
   return (
-    <div>
-      <Button>Click me</Button>
+    <div className="min-h-screen">
+      <Navbar />
+      <main className="">
+        <h1 className="text-4xl font-bold">Welcome</h1>
+      </main>
     </div>
   );
 }
