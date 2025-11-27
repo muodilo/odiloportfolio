@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
+import { SkillsCarousel } from "@/components/skills-carousel";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <SkillsCarousel />
       </main>
     </div>
   );
