@@ -9,15 +9,17 @@ export default function Footer() {
     <footer className="bg-black text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
-          <div>
-            <Logo textClassName='text-white'/>
+          <div className="text-center md:text-left">
+            <div className="flex md:block justify-center">
+              <Logo textClassName='text-white'/>
+            </div>
             <p className="text-gray-400 text-sm leading-relaxed mt-3">
               Full-stack developer and designer<br />
               crafting digital experiences.
             </p>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-white font-bold mb-6 text-lg">Quick Links</h3>
             <ul className="space-y-3">
               <li>
@@ -43,9 +45,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-white font-bold mb-6 text-lg">Quick Links</h3>
-            <div className="flex gap-6">
+            <div className="flex gap-6 justify-center md:justify-start">
               <a
                 href="#"
                 className="text-gray-300 hover:text-teal-500 transition-colors"
