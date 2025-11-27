@@ -2,26 +2,24 @@
 
 import Link from 'next/link';
 import { Github, Facebook, Linkedin, Instagram } from 'lucide-react';
+import { Logo } from './logo';
 
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
-          {/* Brand Section */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 bg-teal-500 rounded-full"></div>
-              <span className="text-2xl font-bold">dilo</span>
+          <div className="text-center md:text-left">
+            <div className="flex md:block justify-center">
+              <Logo textClassName='text-white'/>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed mt-3">
               Full-stack developer and designer<br />
               crafting digital experiences.
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-white font-bold mb-6 text-lg">Quick Links</h3>
             <ul className="space-y-3">
               <li>
@@ -47,10 +45,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Quick Links - Social Icons */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-white font-bold mb-6 text-lg">Quick Links</h3>
-            <div className="flex gap-6">
+            <div className="flex gap-6 justify-center md:justify-start">
               <a
                 href="#"
                 className="text-gray-300 hover:text-teal-500 transition-colors"
