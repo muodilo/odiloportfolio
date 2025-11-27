@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 
 interface LogoProps {
   className?: string;
+  textClassName?: string;
   showText?: boolean;
   size?: "sm" | "md" | "lg";
 }
@@ -25,20 +26,20 @@ const sizeVariants = {
   },
 };
 
-export function Logo({ className, showText = true, size = "md" }: LogoProps) {
+export function Logo({ className, textClassName, showText = true, size = "md" }: LogoProps) {
   const sizes = sizeVariants[size];
 
   return (
     <Link href="/" className={cn("flex items-center", className)}>
       <div
         className={cn(
-          "rounded-full bg-teal-500 flex items-center justify-center flex-shrink-0",
+          "rounded-full bg-teal-500 flex items-center justify-center shrink-0",
           sizes.circle
         )}
       >
       </div>
       {showText && (
-        <span className={cn("font-bold text-gray-900", sizes.text)}>dilo</span>
+        <span className={cn("font-bold text-gray-900", sizes.text, textClassName)}>dilo</span>
       )}
     </Link>
   );
