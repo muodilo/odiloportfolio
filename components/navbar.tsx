@@ -21,10 +21,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="lg:px-32 md:px-16 px-5">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
           <Logo />
-
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
@@ -36,8 +33,6 @@ export function Navbar() {
               </Link>
             ))}
           </div>
-
-          {/* Mobile menu button */}
           <Button
             variant="ghost"
             size="icon"
@@ -53,7 +48,6 @@ export function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden border-t py-4">
             <div className="flex flex-col gap-4">
