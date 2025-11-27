@@ -4,6 +4,7 @@ import { About } from "@/components/about";
 import { SkillsCarousel } from "@/components/skills-carousel";
 import { RecentProjects } from "@/components/recent-projects";
 import { LatestArticles } from "@/components/latest-articles";
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <SkillsCarousel />
         <RecentProjects />
         <LatestArticles />
+        <Contact/>
       </main>
     </div>
   );
