@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
 import { SkillsCarousel } from "@/components/skills-carousel";
 import { RecentProjects } from "@/components/recent-projects";
+import { LatestArticles } from "@/components/latest-articles";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <About />
         <SkillsCarousel />
         <RecentProjects />
+        <LatestArticles />
       </main>
     </div>
   );
