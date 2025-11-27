@@ -49,7 +49,7 @@ export default function Contact() {
   };
 
   return (
-    <section id='contact' className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id='contact' className="py-20 px-5 md:px-16 lg:px-32">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12">
 
