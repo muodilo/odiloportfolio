@@ -5,6 +5,8 @@ import { SkillsCarousel } from "@/components/skills-carousel";
 import { RecentProjects } from "@/components/recent-projects";
 import { LatestArticles } from "@/components/latest-articles";
 import Contact from "@/components/contact";
+import Footer from "@/components/footer";
+import AskAIButton from "@/components/ask-ai-button";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
         <LatestArticles />
         <Contact/>
       </main>
+      <Footer />
+      <AskAIButton />
     </div>
   );
 }
