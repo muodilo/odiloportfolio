@@ -23,22 +23,22 @@ export default function Footer() {
             <h3 className="text-white font-bold mb-6 text-lg">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-gray-300 hover:text-teal-500 transition-colors">
+                <Link href="/" className="text-gray-300 hover:text-teal-500 transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-teal-500 transition-colors">
+                <Link href="/projects" className="text-gray-300 hover:text-teal-500 transition-colors">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-teal-500 transition-colors">
+                <Link href="#about" className="text-gray-300 hover:text-teal-500 transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-teal-500 transition-colors">
+                <Link href="#contact" className="text-gray-300 hover:text-teal-500 transition-colors">
                   Contact
                 </Link>
               </li>
@@ -49,33 +49,35 @@ export default function Footer() {
             <h3 className="text-white font-bold mb-6 text-lg">Quick Links</h3>
             <div className="flex gap-6 justify-center md:justify-start">
               <a
-                href="#"
+                href="https://github.com/muodilo"
+                target="_blank"
                 className="text-gray-300 hover:text-teal-500 transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="w-8 h-8" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-gray-300 hover:text-teal-500 transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-8 h-8" />
-              </a>
+              </a> */}
               <a
-                href="#"
+                href="https://www.linkedin.com/in/murindahabi-odilo/"
+                target="_blank"
                 className="text-gray-300 hover:text-teal-500 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-8 h-8" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-gray-300 hover:text-teal-500 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-8 h-8" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

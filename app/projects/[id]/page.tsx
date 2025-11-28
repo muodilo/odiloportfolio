@@ -27,10 +27,10 @@ export default async function ProjectDetailsPage({
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header with Back Button */}
+      
       <CustomNav title={project.title} />
 
-      <main className="py-12 px-4 sm:px-6 lg:px-8">
+      <main className="py-12 px-5 md:px-16 lg:px-32">
         <div className="max-w-3xl mx-auto">
 
           <span className="text-xs font-semibold text-teal-600 bg-teal-50 px-3 py-1 rounded-full inline-block mb-4">
