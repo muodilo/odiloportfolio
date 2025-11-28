@@ -12,6 +12,7 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string; }>({});
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -21,10 +22,38 @@ export default function Contact() {
       ...prev,
       [name]: value,
     }));
+    // clear the error for this field as user types
+    setErrors((prev) => ({ ...prev, [name]: undefined }));
+  };
+
+  const validateForm = (data: typeof formData) => {
+    const newErrors: { name?: string; email?: string; message?: string } = {};
+
+    if (!data.name || data.name.trim().length < 2) {
+      newErrors.name = 'Please enter your name (at least 2 characters).';
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!data.email || !emailRegex.test(data.email)) {
+      newErrors.email = 'Please enter a valid email address.';
+    }
+
+    if (!data.message || data.message.trim().length < 10) {
+      newErrors.message = 'Please enter a message (at least 10 characters).';
+    }
+
+    return newErrors;
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // client-side validation
+    const validationErrors = validateForm(formData);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -38,6 +67,7 @@ export default function Contact() {
 
       if (response.ok) {
         setFormData({ name: '', email: '', message: '' });
+        setErrors({});
         alert('Message sent successfully!');
       }
     } catch (error) {
@@ -122,9 +152,15 @@ export default function Contact() {
                   placeholder="Your name"
                   value={formData.name}
                   onChange={handleChange}
-                  required
+                  aria-invalid={errors.name ? 'true' : 'false'}
+                  aria-describedby={errors.name ? 'name-error' : undefined}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 />
+                {errors.name && (
+                  <p id="name-error" className="mt-2 text-sm text-red-600" aria-live="polite">
+                    {errors.name}
+                  </p>
+                )}
               </div>
 
 
@@ -142,9 +178,15 @@ export default function Contact() {
                   placeholder="example@gmail.com"
                   value={formData.email}
                   onChange={handleChange}
-                  required
+                  aria-invalid={errors.email ? 'true' : 'false'}
+                  aria-describedby={errors.email ? 'email-error' : undefined}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 />
+                {errors.email && (
+                  <p id="email-error" className="mt-2 text-sm text-red-600" aria-live="polite">
+                    {errors.email}
+                  </p>
+                )}
               </div>
 
               <div>
@@ -161,9 +203,15 @@ export default function Contact() {
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  required
+                  aria-invalid={errors.message ? 'true' : 'false'}
+                  aria-describedby={errors.message ? 'message-error' : undefined}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none"
                 />
+                {errors.message && (
+                  <p id="message-error" className="mt-2 text-sm text-red-600" aria-live="polite">
+                    {errors.message}
+                  </p>
+                )}
               </div>
 
               {/* Submit Button */}
