@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/footer";
+import AskAIButton from "@/components/ask-ai-button";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -25,6 +27,8 @@ export default function RootLayout({
         className={`${roboto.variable} font-sans antialiased`}
       >
         {children}
+        <Footer />
+        <AskAIButton />
       </body>
     </html>
   );

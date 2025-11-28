@@ -2,7 +2,7 @@
 
 import { ArrowLeft, BackpackIcon } from 'lucide-react';
 import Link from 'next/link';
-export function ExperienceNavbar() {
+export function CustomNav({title}: {title?: string}) {
 
 
   return (
@@ -18,7 +18,7 @@ export function ExperienceNavbar() {
           </Link>
 
           <h1 className="absolute left-1/2 transform -translate-x-1/2 text-lg font-bold text-gray-800">
-            Experience
+            {title}
           </h1>
 
 
