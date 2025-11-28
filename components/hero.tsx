@@ -26,16 +26,19 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link 
               href="/projects"
-              className="bg-black text-white hover:bg-gray-800 rounded-lg px-8 py-3 h-auto"
+              className="bg-black text-center text-white hover:bg-gray-800 rounded-lg px-8 py-3 h-auto"
             >
               View My Work
             </Link>
-            <Link 
-              href="/cv.pdf"
-              className="border-2 border-teal-500 text-teal-500 hover:bg-teal-50 rounded-lg px-8 py-3 h-auto"
+            <a
+              href="/files/Odilo_Murindahabi (1).pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 text-center border-teal-500 text-teal-500 hover:bg-teal-50 rounded-lg px-8 py-3 h-auto"
             >
               Download CV
-            </Link>
+            </a>
           </div>
         </div>
         <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] order-first lg:order-last">
