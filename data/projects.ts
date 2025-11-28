@@ -33,8 +33,8 @@ export const projects: Project[] = [
     ],
     year: "2023",
     role: "Full-Stack Developer",
-    demoUrl: "/",
-    githubUrl: "/",
+    demoUrl: "https://insightedge-one.vercel.app/",
+    githubUrl: "https://github.com/muodilo/insightedge.git",
   },
   {
     id: 2,
@@ -54,8 +54,8 @@ export const projects: Project[] = [
     ],
     year: "2023",
     role: "Frontend Developer",
-    demoUrl: "/",
-    githubUrl: "/",
+    demoUrl: "https://github.com/muodilo/movie-app",
+    githubUrl: "https://movie-app-coral-sigma.vercel.app/",
   },
   {
     id: 3,
@@ -75,8 +75,8 @@ export const projects: Project[] = [
     ],
     year: "2023",
     role: "Full-Stack Developer",
-    demoUrl: "/",
-    githubUrl: "/",
+    demoUrl: "https://github.com/muodilo/audiophile",
+    githubUrl: "https://audiophile-eosin-chi.vercel.app/",
   },
 ];
 

@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
 import AskAIButton from "@/components/ask-ai-button";
+import SupportButton from "@/components/support-button";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -28,7 +29,8 @@ export default function RootLayout({
       >
         {children}
         <Footer />
-        <AskAIButton />
+        <SupportButton />
+        {/* <AskAIButton /> */}
       </body>
     </html>
   );
