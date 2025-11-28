@@ -20,8 +20,6 @@ export default function Home() {
         <LatestArticles />
         <Contact/>
       </main>
-      <Footer />
-      <AskAIButton />
     </div>
   );
 }

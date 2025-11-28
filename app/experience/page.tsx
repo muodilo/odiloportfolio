@@ -1,17 +1,14 @@
-import { ExperienceNavbar } from '@/components/experience-navbar';
+import { CustomNav } from '@/components/custom-nav';
 import Experience from '@/components/experience';
-import Footer from '@/components/footer';
-import AskAIButton from '@/components/ask-ai-button';
+
 
 export default function ExperiencePage() {
   return (
     <div className="min-h-screen">
-      <ExperienceNavbar />
+      <CustomNav title="Experience" />
       <main>
         <Experience />
       </main>
-      <Footer />
-      <AskAIButton />
     </div>
   );
 }
