@@ -27,7 +27,7 @@ export function LatestArticles() {
             </p>
           </div>
           <Link
-            href="#articles"
+            href="/blogs"
             className="text-teal-500 hover:text-teal-600 font-medium transition-colors self-start md:self-auto"
           >
             View all →
