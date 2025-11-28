@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { articles } from "@/data/articles";
+import BlogCard from "./blog-card";
 
 export function LatestArticles() {
   return (
@@ -35,35 +36,7 @@ export function LatestArticles() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article) => (
-            <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-shadow border-gray-200">
-              <div className="relative w-full h-48 overflow-hidden">
-                <Image
-                  src={article.image}
-                  alt={article.imageAlt}
-                  fill
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-
-              <CardHeader className="pb-3">
-                <span className="text-teal-500 text-sm font-medium">
-                  {article.category}
-                </span>
-                <CardTitle className="text-xl font-bold text-gray-900 mt-1">
-                  {article.title}
-                </CardTitle>
-              </CardHeader>
-
-              <CardContent className="pt-0">
-                <CardDescription className="text-gray-600 line-clamp-2 mb-3">
-                  {article.description}
-                </CardDescription>
-                <p className="text-sm text-gray-500">
-                  {article.date}
-                </p>
-              </CardContent>
-            </Card>
+            <BlogCard key={article.id} article={article} />
           ))}
         </div>
       </div>
